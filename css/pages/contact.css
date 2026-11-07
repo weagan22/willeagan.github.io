@@ -1,0 +1,69 @@
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-section {
+    min-height: 500px;
+}
+
+    .contact-section h1 {
+        margin-bottom: 20px;
+    }
+
+.contact-intro {
+    max-width: 600px;
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+========================================================= */
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 60px;
+    max-width: 850px;
+}
+
+.contact-item {
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+    .contact-item h2 {
+        margin-bottom: 10px;
+        color: var(--color-blue);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+    }
+
+    .contact-item p,
+    .contact-item a {
+        margin-bottom: 0;
+        color: var(--color-text);
+        font-size: 1rem;
+    }
+
+    .contact-item a {
+        transition: color var(--transition);
+    }
+
+        .contact-item a:hover {
+            color: var(--color-blue);
+        }
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

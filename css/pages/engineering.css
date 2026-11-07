@@ -1,0 +1,743 @@
+
+/* =========================================================
+   ENGINEERING PAGE
+========================================================= */
+
+/* =========================================================
+   PAGE INTRODUCTION
+========================================================= */
+
+.engineering-intro {
+    padding: 100px var(--page-padding);
+    background-color: var(--color-navy);
+    color: #FFFFFF;
+}
+
+.engineering-intro__container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+    width: 100%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+
+/* Introduction Text */
+
+.engineering-intro__content {
+    min-width: 0;
+}
+
+.engineering-intro__eyebrow {
+    margin-bottom: 20px;
+    color: var(--color-blue-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.engineering-intro__title {
+    max-width: 700px;
+    margin-bottom: 28px;
+    color: #FFFFFF;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.12;
+}
+
+    .engineering-intro__title span {
+        color: var(--color-blue-light);
+    }
+
+.engineering-intro__description {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+
+/* Introduction Image */
+
+.engineering-intro__image {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+    .engineering-intro__image img {
+        display: block;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+/* =========================================================
+   INTRODUCTION RESPONSIVE LAYOUT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .engineering-intro__container {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 35px;
+    }
+
+    .engineering-intro__image img {
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .engineering-intro {
+        padding-block: 70px;
+    }
+
+    .engineering-intro__container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .engineering-intro__title {
+        font-size: 2.5rem;
+    }
+
+    .engineering-intro__description {
+        font-size: 1rem;
+    }
+
+    .engineering-intro__image img {
+        height: 240px;
+    }
+}
+
+
+
+/* =========================================================
+   TECHNICAL CAPABILITIES
+========================================================= */
+
+.engineering-capabilities {
+    background-color: var(--color-background-alt);
+}
+
+.engineering-capabilities__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* Section Heading */
+
+.engineering-capabilities__heading {
+    max-width: 800px;
+    margin-bottom: 55px;
+}
+
+    .engineering-capabilities__heading h2 {
+        margin-bottom: 20px;
+    }
+
+    .engineering-capabilities__heading > p:last-child {
+        max-width: 720px;
+        margin-bottom: 0;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+
+/* Capability Grid */
+
+.engineering-capabilities__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background-color: var(--color-border);
+    border: 1px solid var(--color-border);
+}
+
+
+/* Individual Capabilities */
+
+.engineering-capability {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 36px;
+    background-color: #FFFFFF;
+}
+
+.engineering-capability__number {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--color-blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.engineering-capability h3 {
+    margin-bottom: 14px;
+    font-size: 1.35rem;
+}
+
+.engineering-capability > p {
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* Capability Tags */
+
+.engineering-capability__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+    .engineering-capability__tags span {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: var(--color-background-alt);
+        border: 1px solid var(--color-border);
+        border-radius: 3px;
+        color: var(--color-text-muted);
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+
+/* =========================================================
+   ENGINEERING APPROACH
+========================================================= */
+
+.engineering-approach {
+    background-color: var(--color-background);
+}
+
+.engineering-approach__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* Approach Introduction */
+
+.engineering-approach__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 65px;
+    margin-bottom: 75px;
+}
+
+.engineering-approach__heading {
+    min-width: 0;
+}
+
+    .engineering-approach__heading h2 {
+        max-width: 520px;
+        margin-bottom: 25px;
+    }
+
+.engineering-approach__description {
+    max-width: 600px;
+}
+
+    .engineering-approach__description p {
+        margin-bottom: 18px;
+        font-size: 1.05rem;
+        line-height: 1.85;
+    }
+
+        .engineering-approach__description p:last-child {
+            margin-bottom: 0;
+        }
+
+
+/* Composite Layup Image */
+
+.engineering-approach__image {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: var(--color-background-alt);
+}
+
+    .engineering-approach__image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+/* =========================================================
+   ENGINEERING PROCESS
+========================================================= */
+
+.engineering-process {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.engineering-process__step {
+    position: relative;
+    min-width: 0;
+    padding: 32px 24px;
+    border-right: 1px solid var(--color-border);
+}
+
+    .engineering-process__step:first-child {
+        padding-left: 0;
+    }
+
+    .engineering-process__step:last-child {
+        padding-right: 0;
+        border-right: none;
+    }
+
+.engineering-process__number {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--color-blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.engineering-process__step h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.engineering-process__step p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ENGINEERING SOFTWARE
+========================================================= */
+
+.engineering-software {
+    background-color: var(--color-background);
+}
+
+.engineering-software__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* Section Heading */
+
+.engineering-software__heading {
+    max-width: 800px;
+    margin-bottom: 65px;
+}
+
+    .engineering-software__heading h2 {
+        margin-bottom: 18px;
+    }
+
+    .engineering-software__heading > p:last-child {
+        max-width: 700px;
+        margin-bottom: 0;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+
+/* =========================================================
+   DISCIPLINE GROUPS
+========================================================= */
+
+.engineering-software__discipline {
+    margin-bottom: 55px;
+}
+
+    .engineering-software__discipline:last-child {
+        margin-bottom: 0;
+    }
+
+
+/* Discipline Heading */
+
+.engineering-software__discipline-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.engineering-software__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    background-color: var(--color-navy);
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.engineering-software__discipline-heading h3 {
+    margin-bottom: 6px;
+    font-size: 1.3rem;
+}
+
+.engineering-software__discipline-heading p {
+    margin-bottom: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SOFTWARE LOGO GRID
+========================================================= */
+
+.engineering-software__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.engineering-software__grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* Individual Logo Cards */
+
+.engineering-software__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 165px;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+    .engineering-software__item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(16, 40, 61, 0.08);
+    }
+
+
+    /* Logo Image Normalization */
+
+    .engineering-software__item img {
+        display: block;
+        width: 100%;
+        max-width: 190px;
+        height: 75px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    /* Larger Logos Without Captions */
+
+    .engineering-software__item:not(:has(span)) img {
+        height: 105px;
+        max-width: 100%;
+    }
+
+
+    /* Optional Logo Captions */
+
+    .engineering-software__item span {
+        display: block;
+        margin: 0;
+        color: var(--color-text);
+        font-size: 0.85rem;
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+
+/* =========================================================
+   TECHNICAL TOOLKIT
+========================================================= */
+
+.engineering-toolkit {
+    background-color: var(--color-background-alt);
+}
+
+.engineering-toolkit__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* Section Heading */
+
+.engineering-toolkit__heading {
+    max-width: 800px;
+    margin-bottom: 55px;
+}
+
+    .engineering-toolkit__heading h2 {
+        margin-bottom: 0;
+    }
+
+
+/* Technical Skills Grid */
+
+.engineering-toolkit__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* Individual Skill Groups */
+
+.engineering-skill-group {
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+    .engineering-skill-group h3 {
+        margin-bottom: 16px;
+        font-size: 1.25rem;
+    }
+
+    .engineering-skill-group p {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        line-height: 1.9;
+    }
+
+
+/* =========================================================
+   TABLET RESPONSIVE LAYOUT
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* Engineering Approach */
+
+    .engineering-approach__intro {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+        gap: 35px;
+    }
+
+    .engineering-approach__image {
+        height: 350px;
+    }
+
+
+    /* Engineering Process */
+
+    .engineering-process {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .engineering-process__step {
+        padding: 28px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+        .engineering-process__step:first-child {
+            padding-left: 28px;
+        }
+
+        .engineering-process__step:last-child {
+            padding-right: 28px;
+        }
+
+        .engineering-process__step:nth-child(3) {
+            border-right: none;
+        }
+
+        .engineering-process__step:nth-child(4),
+        .engineering-process__step:nth-child(5) {
+            border-bottom: none;
+        }
+}
+
+
+/* =========================================================
+   SOFTWARE TABLET LAYOUT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .engineering-software__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .engineering-software__grid--three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE LAYOUT
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /* Introduction */
+
+    .engineering-intro {
+        padding-block: 70px;
+    }
+
+    .engineering-intro__title {
+        font-size: 2.5rem;
+    }
+
+    .engineering-intro__description {
+        font-size: 1rem;
+    }
+
+
+    /* Technical Capabilities */
+
+    .engineering-capabilities__heading {
+        margin-bottom: 36px;
+    }
+
+    .engineering-capabilities__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-capability {
+        padding: 28px;
+    }
+
+
+    /* Engineering Approach */
+
+    .engineering-approach__intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 45px;
+    }
+
+    .engineering-approach__heading h2 {
+        max-width: 100%;
+    }
+
+    .engineering-approach__description p {
+        font-size: 1rem;
+    }
+
+    .engineering-approach__image {
+        height: 280px;
+    }
+
+
+    /* Engineering Process */
+
+    .engineering-process {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-process__step,
+    .engineering-process__step:first-child,
+    .engineering-process__step:last-child {
+        padding: 26px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+        .engineering-process__step:last-child {
+            border-bottom: none;
+        }
+
+    .engineering-process__number {
+        margin-bottom: 12px;
+    }
+
+
+    /* Engineering Software */
+
+    .engineering-software__heading {
+        margin-bottom: 35px;
+    }
+
+    .engineering-software__discipline {
+        margin-bottom: 40px;
+    }
+
+    .engineering-software__discipline-heading {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+        .engineering-software__discipline-heading h3 {
+            font-size: 1.15rem;
+        }
+
+    .engineering-software__grid,
+    .engineering-software__grid--three {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .engineering-software__item {
+        min-height: 125px;
+        padding: 18px;
+        gap: 10px;
+    }
+
+        .engineering-software__item img {
+            height: 60px;
+        }
+
+        .engineering-software__item span {
+            font-size: 0.78rem;
+        }
+
+
+    /* Technical Toolkit */
+
+    .engineering-toolkit__heading {
+        margin-bottom: 36px;
+    }
+
+    .engineering-toolkit__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .engineering-skill-group {
+        padding: 26px;
+    }
+}

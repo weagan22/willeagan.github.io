@@ -1,0 +1,230 @@
+
+/* =========================================================
+   HOME PAGE — HERO
+========================================================= */
+
+
+/* =========================
+   Main Hero Section
+========================= */
+
+.home-hero {
+    padding: 100px var(--page-padding);
+    background-color: var(--color-navy);
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   Hero Container
+========================= */
+
+.home-hero__container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* =========================
+   Hero Content
+========================= */
+
+.home-hero__content {
+    max-width: 720px;
+}
+
+.home-hero__eyebrow {
+    margin-bottom: 20px;
+    color: var(--color-blue-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   Hero Heading
+========================= */
+
+.home-hero__title {
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+}
+
+    .home-hero__title span {
+        display: block;
+        color: var(--color-blue-light);
+    }
+
+
+/* =========================
+   Hero Description
+========================= */
+
+.home-hero__description {
+    max-width: 650px;
+    margin-bottom: 32px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Hero Actions / Buttons
+========================= */
+
+.home-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.home-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+
+/* Primary Button */
+
+.home-hero__button--primary {
+    background-color: var(--color-blue);
+    color: #FFFFFF;
+}
+
+    .home-hero__button--primary:hover {
+        background-color: var(--color-blue-light);
+        color: var(--color-navy);
+    }
+
+
+/* Secondary Button */
+
+.home-hero__button--secondary {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+}
+
+    .home-hero__button--secondary:hover {
+        background-color: #FFFFFF;
+        border-color: #FFFFFF;
+        color: var(--color-navy);
+    }
+
+
+/* =========================
+   Hero Credentials
+========================= */
+
+.home-hero__credentials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    color: #B8C3D1;
+    font-size: 0.85rem;
+}
+
+    .home-hero__credentials span {
+        color: inherit;
+    }
+
+.home-hero__separator {
+    color: var(--color-blue-light);
+}
+
+
+/* =========================
+   Hero Headshot
+========================= */
+
+.home-hero__headshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+    .home-hero__headshot img {
+        display: block;
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+    }
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+========================================================= */
+
+
+/* =========================
+   Tablet / Smaller Desktop
+========================= */
+
+@media (max-width: 900px) {
+
+    .home-hero__container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .home-hero__content {
+        max-width: 100%;
+    }
+
+    .home-hero__headshot {
+        justify-content: flex-start;
+    }
+
+        .home-hero__headshot img {
+            max-width: 320px;
+        }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .home-hero {
+        padding-block: 64px;
+    }
+
+    .home-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .home-hero__description {
+        font-size: 1rem;
+    }
+
+    .home-hero__credentials {
+        gap: 8px;
+    }
+
+    .home-hero__headshot img {
+        max-width: 280px;
+    }
+}

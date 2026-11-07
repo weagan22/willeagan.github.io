@@ -1,0 +1,16 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "name": "Run Website",
+      "project": "C:\\PATH\\TO\\PYTHON\\python.exe",
+      "args": [
+        "-c",
+        "\"import http.server, webbrowser; server = http.server.HTTPServer(('', 8000), lambda *args, **kwargs: http.server.SimpleHTTPRequestHandler(*args, directory=r'C:\\PATH\\TO\\WEBSITE\\ROOT', **kwargs)); webbrowser.open('http://localhost:8000'); server.serve_forever()\""
+      ],
+      "cwd": "C:\\PATH\\TO\\WEBSITE\\ROOT"
+    }
+  ]
+}

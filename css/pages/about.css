@@ -1,0 +1,545 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+
+/* =========================================================
+   PAGE INTRODUCTION
+========================================================= */
+
+.about-intro {
+    padding: 100px var(--page-padding);
+    background-color: var(--color-navy);
+    color: #FFFFFF;
+}
+
+.about-intro__container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+.about-intro__eyebrow {
+    margin-bottom: 20px;
+    color: var(--color-blue-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.about-intro__title {
+    max-width: 900px;
+    margin-bottom: 28px;
+    color: #FFFFFF;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.12;
+}
+
+    .about-intro__title span {
+        color: var(--color-blue-light);
+    }
+
+.about-intro__description {
+    max-width: 800px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.about-intro__description--secondary {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 1.05rem;
+}
+
+
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.about-education {
+    background-color: var(--color-background-alt);
+}
+
+.about-education__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* Main Layout */
+
+.about-education__main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: start;
+    gap: 55px;
+}
+
+
+/* University Details */
+
+.about-education__details {
+    max-width: none;
+}
+
+    .about-education__details > .section-label {
+        margin-bottom: 22px;
+    }
+
+
+/* Logo and University Information */
+
+.about-education__identity {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    align-items: start;
+    gap: 35px;
+}
+
+.about-education__logo-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 210px;
+}
+
+.about-education__logo {
+    display: block;
+    width: 210px;
+    height: 170px;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.about-education__information h2 {
+    margin-bottom: 14px;
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    line-height: 1.2;
+}
+
+.about-education__degree {
+    margin-bottom: 12px;
+    color: var(--color-navy);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.about-education__accreditation {
+    margin-bottom: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* Academic Highlights */
+
+.about-education__highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 12px;
+}
+
+.about-education__highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    min-height: 85px;
+    padding: 12px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+    .about-education__highlight strong {
+        color: var(--color-navy);
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .about-education__highlight span {
+        color: var(--color-text-muted);
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+
+/* Activities */
+
+.about-education__activities {
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE EDUCATION
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-education__main {
+        grid-template-columns: minmax(0, 1fr) 240px;
+        gap: 30px;
+    }
+
+    .about-education__identity {
+        grid-template-columns: 160px minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .about-education__logo-wrapper,
+    .about-education__logo {
+        width: 160px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .about-education__main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-education__highlights {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .about-education__identity {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .about-education__logo-wrapper,
+    .about-education__logo {
+        width: 110px;
+    }
+
+    .about-education__logo {
+        height: 110px;
+    }
+
+    .about-education__information h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-education__degree {
+        font-size: 1rem;
+    }
+
+    .about-education__accreditation {
+        font-size: 0.85rem;
+    }
+
+    .about-education__highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .about-education__highlight {
+        min-height: 80px;
+        padding: 12px;
+    }
+}
+
+
+/* =========================================================
+   TECHNICAL CAPABILITIES
+========================================================= */
+
+.about-capabilities {
+    padding-inline: var(--page-padding);
+}
+
+.about-capabilities__container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+.about-capabilities .section-heading {
+    max-width: 800px;
+}
+
+    .about-capabilities .section-heading h2 {
+        color: #FFFFFF;
+    }
+
+.about-capabilities__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* =========================================================
+   CAPABILITY CARDS
+========================================================= */
+
+.about-capability-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px;
+    background-color: var(--color-navy-light);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), background-color var(--transition);
+}
+
+    .about-capability-card:hover {
+        transform: translateY(-3px);
+        background-color: #20445F;
+    }
+
+.about-capability-card__number {
+    margin-bottom: 20px;
+    color: var(--color-blue-light);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.about-capability-card h3 {
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+.about-capability-card > p {
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.about-capability-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+    .about-capability-card__tags span {
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 3px;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+
+/* =========================================================
+   CLOSING SECTION
+========================================================= */
+
+.about-closing {
+    padding: 85px var(--page-padding);
+    background-color: var(--color-background-alt);
+}
+
+.about-closing__container {
+    width: 100%;
+    max-width: 850px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+    .about-closing__container .section-label {
+        margin-bottom: 16px;
+    }
+
+    .about-closing__container h2 {
+        margin-bottom: 20px;
+    }
+
+    .about-closing__container > p:not(.section-label) {
+        max-width: 680px;
+        margin: 0 auto 30px;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+.about-closing__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    background-color: var(--color-navy);
+    border: 1px solid var(--color-navy);
+    border-radius: var(--border-radius);
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+    .about-closing__button:hover {
+        background-color: transparent;
+        color: var(--color-navy);
+    }
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+========================================================= */
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .about-education__main {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 30px;
+    }
+
+    .about-education__details {
+        grid-column: 1;
+    }
+
+    .about-education__logo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .about-education__highlights {
+        grid-column: 1 / -1;
+    }
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    /* Introduction */
+
+    .about-intro {
+        padding-block: 70px;
+    }
+
+    .about-intro__title {
+        font-size: 2.5rem;
+    }
+
+    .about-intro__description {
+        font-size: 1rem;
+    }
+
+
+    /* Education */
+
+    .about-education__main {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 28px;
+    }
+
+    .about-education__details {
+        grid-column: 1;
+    }
+
+    /* Logo and University Information */
+
+    .about-education__identity {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-education__logo-wrapper {
+        width: 100%;
+        min-height: 0;
+        justify-content: flex-start;
+    }
+
+    .about-education__logo {
+        width: 100%;
+        max-width: 280px;
+        height: 150px;
+        max-height: 150px;
+        padding: 0;
+        object-fit: contain;
+        object-position: left center;
+    }
+
+    .about-education__information h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-education__degree {
+        font-size: 1.05rem;
+    }
+
+    .about-education__accreditation {
+        font-size: 0.9rem;
+    }
+
+    /* Academic Highlights */
+
+    .about-education__highlights {
+        grid-column: 1;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .about-education__highlight {
+        min-height: 80px;
+        padding: 13px;
+    }
+
+        .about-education__highlight strong {
+            font-size: 1.1rem;
+        }
+
+
+    /* Capabilities */
+
+    .about-capabilities__grid,
+    .about-toolkit__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-capability-card {
+        padding: 26px;
+    }
+
+    .about-skill-group {
+        padding: 24px;
+    }
+
+
+    /* Closing */
+
+    .about-closing {
+        padding-block: 65px;
+    }
+
+    .about-closing__container h2 {
+        font-size: 2rem;
+    }
+}
+

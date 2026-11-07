@@ -1,0 +1,17 @@
+/* =========================================================
+   404 ERROR PAGE
+========================================================= */
+
+.error-section {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+    .error-section h1 {
+        margin-bottom: 20px;
+    }
+
+    .error-section p:last-child {
+        max-width: 550px;
+    }
