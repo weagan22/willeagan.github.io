@@ -69,13 +69,13 @@
     border-radius: var(--border-radius);
 }
 
-    .engineering-intro__image img {
-        display: block;
-        width: 100%;
-        height: 380px;
-        object-fit: cover;
-        object-position: center;
-    }
+.engineering-intro__image img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+}
 
 
 /* =========================================================

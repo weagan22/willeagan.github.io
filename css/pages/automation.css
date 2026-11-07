@@ -15,6 +15,10 @@
 }
 
 .automation-intro__container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
     width: 100%;
     max-width: var(--content-width);
     margin-inline: auto;
@@ -50,6 +54,24 @@
 
 .automation-intro__supporting {
     margin-top: 18px;
+}
+
+
+/* Introduction Image */
+
+.automation-intro__image {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.automation-intro__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--border-radius);
 }
 
 
@@ -328,9 +350,29 @@
     }
 
 
+
 /* =========================================================
    RESPONSIVE LAYOUT
 ========================================================= */
+
+
+/* =========================
+   Tablet / Smaller Desktop
+========================= */
+
+@media (max-width: 900px) {
+
+    /* Introduction */
+
+    .automation-intro__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .automation-intro__image img {
+        height: 320px;
+    }
+}
 
 
 /* =========================

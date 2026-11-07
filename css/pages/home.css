@@ -10,7 +10,7 @@
 
 .home-hero {
     padding: 100px var(--page-padding);
-    background-color: var(--color-navy);
+    background-color: var(--color-navy-light);
     color: #FFFFFF;
 }
 
