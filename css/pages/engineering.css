@@ -702,7 +702,8 @@
 /* #endregion SECTION HEADING */
 
 
-/* #region TECHNICAL SKILLS GRID */
+/* #region TECHNICAL SKILLS GRID
+========================================================= */
 
 .engineering-toolkit__grid {
     display: grid;
@@ -720,16 +721,34 @@
     border-radius: var(--border-radius);
 }
 
-    .engineering-skill-group h3 {
-        margin-bottom: 16px;
-        font-size: 1.25rem;
-    }
 
-    .engineering-skill-group p {
-        margin-bottom: 0;
-        font-size: 0.95rem;
-        line-height: 1.9;
-    }
+/* Skill Group Icons */
+
+.engineering-skill-group__icon {
+    display: block;
+    width: 450px;
+    height: 250px;
+    object-fit: contain;
+    margin: 0 auto 22px;
+}
+
+
+/* Skill Group Headings */
+
+.engineering-skill-group h3 {
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+
+/* Skill Group Descriptions */
+
+.engineering-skill-group p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
 
 /* #endregion TECHNICAL SKILLS GRID */
 
