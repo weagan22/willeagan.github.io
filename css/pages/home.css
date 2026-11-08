@@ -1,12 +1,10 @@
-
 /* =========================================================
    HOME PAGE — HERO
 ========================================================= */
 
 
-/* =========================
-   Main Hero Section
-========================= */
+/* #region MAIN HERO SECTION
+========================================================= */
 
 .home-hero {
     padding: 100px var(--page-padding);
@@ -14,10 +12,11 @@
     color: #FFFFFF;
 }
 
+/* #endregion MAIN HERO SECTION */
 
-/* =========================
-   Hero Container
-========================= */
+
+/* #region HERO CONTAINER
+========================================================= */
 
 .home-hero__container {
     width: 100%;
@@ -29,10 +28,11 @@
     gap: 80px;
 }
 
+/* #endregion HERO CONTAINER */
 
-/* =========================
-   Hero Content
-========================= */
+
+/* #region HERO CONTENT
+========================================================= */
 
 .home-hero__content {
     max-width: 720px;
@@ -47,10 +47,11 @@
     text-transform: uppercase;
 }
 
+/* #endregion HERO CONTENT */
 
-/* =========================
-   Hero Heading
-========================= */
+
+/* #region HERO HEADING
+========================================================= */
 
 .home-hero__title {
     margin-bottom: 24px;
@@ -64,10 +65,11 @@
         color: var(--color-blue-light);
     }
 
+/* #endregion HERO HEADING */
 
-/* =========================
-   Hero Description
-========================= */
+
+/* #region HERO DESCRIPTION
+========================================================= */
 
 .home-hero__description {
     max-width: 650px;
@@ -77,10 +79,11 @@
     line-height: 1.7;
 }
 
+/* #endregion HERO DESCRIPTION */
 
-/* =========================
-   Hero Actions / Buttons
-========================= */
+
+/* #region HERO ACTIONS / BUTTONS
+========================================================= */
 
 .home-hero__actions {
     display: flex;
@@ -128,10 +131,11 @@
         color: var(--color-navy);
     }
 
+/* #endregion HERO ACTIONS / BUTTONS */
 
-/* =========================
-   Hero Credentials
-========================= */
+
+/* #region HERO CREDENTIALS
+========================================================= */
 
 .home-hero__credentials {
     display: flex;
@@ -150,36 +154,36 @@
     color: var(--color-blue-light);
 }
 
+/* #endregion HERO CREDENTIALS */
 
-/* =========================
-   Hero Headshot
-========================= */
+
+/* #region HERO HEADSHOT
+========================================================= */
 
 .home-hero__headshot {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 200%;
 }
 
     .home-hero__headshot img {
         display: block;
-        width: 100%;
-        max-width: 380px;
+        width: 200%;
+        max-width: 800px;
         height: auto;
         object-fit: cover;
         border-radius: var(--border-radius);
     }
 
+/* #endregion HERO HEADSHOT */
 
-/* =========================================================
-   RESPONSIVE LAYOUT
+
+/* #region RESPONSIVE LAYOUT
 ========================================================= */
 
 
-/* =========================
-   Tablet / Smaller Desktop
-========================= */
+/* #region TABLET / SMALLER DESKTOP */
 
 @media (max-width: 900px) {
 
@@ -201,10 +205,10 @@
         }
 }
 
+/* #endregion TABLET / SMALLER DESKTOP */
 
-/* =========================
-   Mobile
-========================= */
+
+/* #region MOBILE */
 
 @media (max-width: 600px) {
 
@@ -228,3 +232,7 @@
         max-width: 280px;
     }
 }
+
+/* #endregion MOBILE */
+
+/* #endregion RESPONSIVE LAYOUT */

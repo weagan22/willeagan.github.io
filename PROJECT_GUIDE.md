@@ -748,7 +748,26 @@ Keep documentation concise and useful.
 - Prefer updating existing sections over repeatedly adding new sections.
 - Only introduce additional documentation files when the project's size or complexity genuinely warrants them.
 
-### 12.3 Markdown Documentation and Output
+###  12.3 CSS Formatting & Organization Guidelines
+
+- **Use CSS regions** (`/* #region NAME */` and `/* #endregion NAME */`) to organize every major section.
+- **Major sections** must use the established header format:
+
+  ```css
+  /* #region SECTION NAME
+  ========================================================= */
+
+- Close every region with a matching /* #endregion SECTION NAME */.
+- Use nested regions for logical subsections when helpful (e.g., EXPERIENCE ITEMS, TROPHY GALLERY, PROGRAM CARDS).
+- Keep related styles together so each major section can be replaced independently.
+- Keep responsive styles inside their respective sections. Each section should contain its own tablet and mobile media queries rather than collecting all responsive styles at the bottom.
+- Avoid duplicate or conflicting media queries.
+- Maintain the existing indentation, spacing, selector naming, and comment conventions.
+- Preserve existing styles unless a change is specifically requested.
+- Return the complete updated section, including all opening and closing region markers. Never provide partial edits or instructions to manually insert changes.
+- Keep formatting consistent with the existing stylesheet. Do not introduce a different header or commenting style.
+
+### 12.4 Markdown Documentation and Output
 
 All project documentation uses standard Markdown syntax.
 

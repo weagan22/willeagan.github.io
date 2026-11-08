@@ -2,6 +2,10 @@
    CONTACT PAGE
 ========================================================= */
 
+
+/* #region CONTACT SECTION
+========================================================= */
+
 .contact-section {
     min-height: 500px;
 }
@@ -15,9 +19,10 @@
     margin-bottom: 55px;
 }
 
+/* #endregion CONTACT SECTION */
 
-/* =========================================================
-   CONTACT DETAILS
+
+/* #region CONTACT DETAILS
 ========================================================= */
 
 .contact-details {
@@ -55,9 +60,10 @@
             color: var(--color-blue);
         }
 
+/* #endregion CONTACT DETAILS */
 
-/* =========================================================
-   RESPONSIVE
+
+/* #region RESPONSIVE
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -67,3 +73,5 @@
         gap: 30px;
     }
 }
+
+/* #endregion RESPONSIVE */

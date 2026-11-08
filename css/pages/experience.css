@@ -1,13 +1,10 @@
-
+css
 /* =========================================================
    EXPERIENCE PAGE
 ========================================================= */
 
-
-/* =========================================================
-   PROFESSIONAL EXPERIENCE
+/* #region PROFESSIONAL EXPERIENCE
 ========================================================= */
-
 .experience {
 	background-color: var(--color-background-alt);
 }
@@ -17,20 +14,51 @@
 	margin-inline: auto;
 }
 
+/* #region EXPERIENCE HEADING */
+
 .experience__heading {
-	max-width: 850px;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+	align-items: center;
+	gap: 45px;
 	margin-bottom: 65px;
 }
 
-	.experience__heading h1 {
+.experience__heading-content {
+	min-width: 0;
+}
+
+	.experience__heading-content h1 {
+		max-width: 650px;
 		margin-bottom: 0;
 		font-size: clamp(2.4rem, 5vw, 4rem);
 	}
 
+	.experience__heading-content span {
+		color: var(--color-blue-light);
+	}
+/* HPTC Logo */
 
-/* =========================================================
-   EXPERIENCE ITEMS
-========================================================= */
+.experience__heading-logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	min-width: 0;
+}
+
+	.experience__heading-logo img {
+		display: block;
+		width: 100%;
+		max-width: 550px;
+		height: auto;
+		object-fit: contain;
+		border-radius: var(--border-radius);
+	}
+
+/* #endregion EXPERIENCE HEADING */
+
+
+/* #region EXPERIENCE ITEMS */
 
 .experience-item {
 	display: grid;
@@ -45,9 +73,7 @@
 	}
 
 
-/* =========================
-   Employment Dates
-========================= */
+/* Employment Dates */
 
 .experience-item__meta {
 	padding-top: 7px;
@@ -62,9 +88,7 @@
 	}
 
 
-/* =========================
-   Employment Details
-========================= */
+/* Employment Details */
 
 .experience-item__content {
 	max-width: 850px;
@@ -95,9 +119,7 @@
 }
 
 
-/* =========================
-   Accomplishments
-========================= */
+/* Accomplishments */
 
 .experience-item__content ul {
 	display: flex;
@@ -118,8 +140,60 @@
 		color: var(--color-blue);
 	}
 
-/* =========================================================
-   INDUSTRY EXPERIENCE / CUSTOMER LOGOS
+/* #endregion EXPERIENCE ITEMS */
+
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+	.experience-item {
+		grid-template-columns: 145px minmax(0, 1fr);
+		gap: 30px;
+	}
+}
+
+@media (max-width: 650px) {
+
+	.experience__heading {
+		grid-template-columns: 1fr;
+		gap: 28px;
+		margin-bottom: 40px;
+	}
+
+	.experience__heading-logo {
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+		.experience__heading-logo img {
+			width: 100%;
+			max-width: 420px;
+			height: auto;
+		}
+
+
+	.experience-item {
+		grid-template-columns: 1fr;
+		gap: 12px;
+		padding-block: 32px;
+	}
+
+	.experience-item__meta {
+		padding-top: 0;
+	}
+
+	.experience-item__content h2 {
+		font-size: 1.4rem;
+	}
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion PROFESSIONAL EXPERIENCE */
+
+
+/* #region INDUSTRY EXPERIENCE / CUSTOMER LOGOS
 ========================================================= */
 
 .experience-clients {
@@ -133,9 +207,6 @@
 	margin-inline: auto;
 }
 
-
-/* Section Heading */
-
 .experience-clients__heading {
 	max-width: 800px;
 	margin-bottom: 40px;
@@ -147,7 +218,7 @@
 	}
 
 
-/* Logo Ribbon */
+/* #region LOGO GRID */
 
 .experience-clients__grid {
 	display: grid;
@@ -155,9 +226,6 @@
 	align-items: center;
 	gap: 20px;
 }
-
-
-/* Individual Logo */
 
 .experience-clients__logo {
 	display: flex;
@@ -177,16 +245,14 @@
 		object-position: center;
 	}
 
+/* #endregion LOGO GRID */
 
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* #region RESPONSIVE */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
 	.experience-clients__grid {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 12px;
 	}
 }
@@ -216,9 +282,12 @@
 		}
 }
 
+/* #endregion RESPONSIVE */
 
-/* =========================================================
-   SELECTED WORK
+/* #endregion INDUSTRY EXPERIENCE / CUSTOMER LOGOS */
+
+
+/* #region SELECTED WORK
 ========================================================= */
 
 .experience-work {
@@ -247,9 +316,15 @@
 	}
 
 
-/* =========================================================
-   PORTFOLIO GROUP
-========================================================= */
+/* #region PORTFOLIO GROUPS */
+
+.portfolio-group {
+	margin-bottom: 90px;
+}
+
+	.portfolio-group:last-child {
+		margin-bottom: 0;
+	}
 
 .portfolio-group__heading {
 	max-width: 800px;
@@ -263,14 +338,345 @@
 
 	.portfolio-group__heading > p:last-child {
 		max-width: 720px;
+		margin-bottom: 0;
 		font-size: 1rem;
 		line-height: 1.8;
 	}
 
+/* #endregion PORTFOLIO GROUPS */
 
-/* =========================================================
-   AEROSPACE PROGRAM GRID
+
+/* #region RESPONSIVE */
+
+@media (max-width: 650px) {
+
+	.experience-work__heading {
+		margin-bottom: 50px;
+	}
+
+	.portfolio-group {
+		margin-bottom: 65px;
+	}
+
+	.portfolio-group__heading h3 {
+		font-size: 1.4rem;
+	}
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion SELECTED WORK */
+
+
+/* #region PRODUCT DESIGN / TROPHY SHOWCASE
 ========================================================= */
+
+.trophy-showcase {
+	margin-bottom: 90px;
+}
+
+
+/* #region TROPHY GALLERY */
+
+.trophy-gallery {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-areas:
+		"hero exploded"
+		"assembly continuity"
+		"orthographic orthographic";
+	gap: 22px;
+}
+
+
+	/* #region SHARED FIGURE STYLING */
+
+	.trophy-gallery figure {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		min-height: 0;
+		margin: 0;
+		overflow: hidden;
+		background-color: #FFFFFF;
+		border: 1px solid var(--color-border);
+		border-radius: var(--border-radius);
+	}
+
+		.trophy-gallery figure img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			min-height: 0;
+			padding: 30px;
+			object-fit: contain;
+			background-color: var(--color-background-alt);
+		}
+
+	.trophy-gallery figcaption {
+		flex-shrink: 0;
+		padding: 12px 15px;
+		color: var(--color-text-muted);
+		font-size: 0.8rem;
+		line-height: 1.4;
+		text-align: center;
+		border-top: 1px solid var(--color-border);
+	}
+
+/* #endregion SHARED FIGURE STYLING */
+
+
+/* #region PRIMARY SHOWCASE IMAGES */
+
+.trophy-gallery__hero,
+.trophy-gallery__exploded {
+	height: 700px;
+}
+
+.trophy-gallery__assembly,
+.trophy-gallery__continuity {
+	height: 480px;
+}
+
+.trophy-gallery__hero {
+	grid-area: hero;
+}
+
+.trophy-gallery__exploded {
+	grid-area: exploded;
+}
+
+.trophy-gallery__assembly {
+	grid-area: assembly;
+}
+
+.trophy-gallery__continuity {
+	grid-area: continuity;
+}
+
+/* #endregion PRIMARY SHOWCASE IMAGES */
+
+
+/* #region ORTHOGRAPHIC AND GEOMETRY VIEWS */
+
+.trophy-gallery__orthographic {
+	display: grid;
+	grid-area: orthographic;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: 350px 350px;
+	grid-template-areas:
+		"isometric gap top"
+		"isometric side front";
+	gap: 16px;
+}
+
+
+	/* Individual View Placement */
+
+	.trophy-gallery__orthographic .trophy-gallery__isometric {
+		grid-area: isometric;
+		height: 100%;
+	}
+
+	.trophy-gallery__orthographic .trophy-gallery__side {
+		grid-area: side;
+		height: 100%;
+	}
+
+	.trophy-gallery__orthographic .trophy-gallery__top {
+		grid-area: top;
+		height: 73%;
+		align-self: end;
+	}
+
+	.trophy-gallery__orthographic .trophy-gallery__front {
+		grid-area: front;
+		height: 100%;
+	}
+
+
+	/* Figure Styling */
+
+	.trophy-gallery__orthographic figure {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		min-height: 0;
+		overflow: hidden;
+	}
+
+
+	/* Image Styling */
+
+	.trophy-gallery__orthographic img {
+		flex: 1;
+		width: 100%;
+		min-height: 0;
+		padding: 16px;
+		object-fit: contain;
+	}
+
+	.trophy-gallery__orthographic figcaption {
+		flex-shrink: 0;
+		padding: 10px 6px;
+		font-size: 0.76rem;
+		text-align: center;
+	}
+
+	/* Isometric View */
+
+	.trophy-gallery__orthographic .trophy-gallery__isometric {
+		grid-area: isometric;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: visible;
+		border: none;
+		background: transparent;
+	}
+
+		.trophy-gallery__orthographic .trophy-gallery__isometric img {
+			width: 100%;
+			height: 45%;
+			padding: 16px 0;
+			object-fit: contain;
+			flex: none;
+		}
+
+/* #endregion ORTHOGRAPHIC AND GEOMETRY VIEWS */
+
+/* #endregion TROPHY GALLERY */
+
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+	/* Primary Showcase */
+
+	.trophy-gallery__hero,
+	.trophy-gallery__exploded,
+	.trophy-gallery__assembly,
+	.trophy-gallery__continuity {
+		height: 340px;
+	}
+
+
+	/* Technical Views */
+
+	.trophy-gallery__orthographic {
+		gap: 12px;
+	}
+
+		.trophy-gallery__orthographic figure {
+			height: 180px;
+		}
+}
+
+
+@media (max-width: 650px) {
+
+	/* Showcase Spacing */
+
+	.trophy-showcase {
+		margin-bottom: 65px;
+	}
+
+
+	/* Primary Showcase */
+
+	.trophy-gallery {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-areas:
+			"hero exploded"
+			"assembly continuity"
+			"orthographic orthographic";
+		gap: 12px;
+	}
+
+	.trophy-gallery__hero,
+	.trophy-gallery__exploded,
+	.trophy-gallery__assembly,
+	.trophy-gallery__continuity {
+		height: 230px;
+	}
+
+	.trophy-gallery figure img {
+		padding: 10px;
+	}
+
+
+	/* Technical Views - Mobile Reset */
+
+	.trophy-gallery__orthographic {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-rows: auto;
+		grid-template-areas:
+			"side front"
+			"top isometric";
+		gap: 10px;
+	}
+
+		.trophy-gallery__orthographic .trophy-gallery__side,
+		.trophy-gallery__orthographic .trophy-gallery__front,
+		.trophy-gallery__orthographic .trophy-gallery__top,
+		.trophy-gallery__orthographic .trophy-gallery__isometric {
+			height: 155px;
+			min-height: 0;
+			overflow: hidden;
+		}
+
+		.trophy-gallery__orthographic figure img {
+			width: 100%;
+			height: 100%;
+			padding: 8px;
+			object-fit: contain;
+			flex: 1;
+		}
+
+
+		/* Isometric View - Mobile Reset */
+
+		.trophy-gallery__orthographic .trophy-gallery__isometric {
+			grid-area: isometric;
+			height: 155px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid var(--color-border);
+			border-radius: var(--border-radius);
+			background-color: #FFFFFF;
+		}
+
+			.trophy-gallery__orthographic .trophy-gallery__isometric img {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+				padding: 8px;
+				flex: 1;
+				object-fit: contain;
+			}
+
+
+	/* Captions */
+
+	.trophy-gallery figcaption {
+		padding: 7px 5px;
+		font-size: 0.65rem;
+	}
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion PRODUCT DESIGN / TROPHY SHOWCASE */
+
+
+/* #region AEROSPACE PROGRAMS
+========================================================= */
+
+
+/* #region PROGRAM GRID */
 
 .program-grid {
 	display: grid;
@@ -278,10 +684,10 @@
 	gap: 28px;
 }
 
+/* #endregion PROGRAM GRID */
 
-/* =========================================================
-   PROGRAM CARDS
-========================================================= */
+
+/* #region PROGRAM CARDS */
 
 .program-card {
 	display: flex;
@@ -300,9 +706,7 @@
 	}
 
 
-/* =========================
-   Program Images
-========================= */
+/* Program Images */
 
 .program-card__media {
 	display: flex;
@@ -323,9 +727,7 @@
 	}
 
 
-/* =========================
-   Program Content
-========================= */
+/* Program Content */
 
 .program-card__content {
 	flex: 1;
@@ -343,22 +745,12 @@
 		line-height: 1.7;
 	}
 
-
-/* =========================================================
-   RESPONSIVE LAYOUT
-========================================================= */
+/* #endregion PROGRAM CARDS */
 
 
-/* =========================
-   Tablet
-========================= */
+/* #region RESPONSIVE */
 
 @media (max-width: 1000px) {
-
-	.experience-item {
-		grid-template-columns: 145px minmax(0, 1fr);
-		gap: 30px;
-	}
 
 	.program-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -366,38 +758,7 @@
 	}
 }
 
-
-/* =========================
-   Mobile
-========================= */
-
 @media (max-width: 650px) {
-
-	.experience__heading {
-		margin-bottom: 40px;
-	}
-
-	.experience-item {
-		grid-template-columns: 1fr;
-		gap: 12px;
-		padding-block: 32px;
-	}
-
-	.experience-item__meta {
-		padding-top: 0;
-	}
-
-	.experience-item__content h2 {
-		font-size: 1.4rem;
-	}
-
-	.experience-work__heading {
-		margin-bottom: 50px;
-	}
-
-	.portfolio-group__heading h3 {
-		font-size: 1.4rem;
-	}
 
 	.program-grid {
 		grid-template-columns: 1fr;
@@ -408,3 +769,7 @@
 		padding: 22px;
 	}
 }
+
+/* #endregion RESPONSIVE */
+
+/* #endregion AEROSPACE PROGRAMS */

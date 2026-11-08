@@ -1,10 +1,9 @@
-
 /* =========================================================
    ENGINEERING PAGE
 ========================================================= */
 
-/* =========================================================
-   PAGE INTRODUCTION
+
+/* #region ENGINEERING INTRODUCTION
 ========================================================= */
 
 .engineering-intro {
@@ -24,7 +23,7 @@
 }
 
 
-/* Introduction Text */
+/* #region INTRODUCTION CONTENT */
 
 .engineering-intro__content {
     min-width: 0;
@@ -59,8 +58,10 @@
     line-height: 1.8;
 }
 
+/* #endregion INTRODUCTION CONTENT */
 
-/* Introduction Image */
+
+/* #region INTRODUCTION IMAGE */
 
 .engineering-intro__image {
     width: 100%;
@@ -69,18 +70,18 @@
     border-radius: var(--border-radius);
 }
 
-.engineering-intro__image img {
-    display: block;
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    object-position: center;
-}
+    .engineering-intro__image img {
+        display: block;
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+/* #endregion INTRODUCTION IMAGE */
 
 
-/* =========================================================
-   INTRODUCTION RESPONSIVE LAYOUT
-========================================================= */
+/* #region RESPONSIVE */
 
 @media (max-width: 900px) {
 
@@ -119,10 +120,12 @@
     }
 }
 
+/* #endregion RESPONSIVE */
+
+/* #endregion ENGINEERING INTRODUCTION */
 
 
-/* =========================================================
-   TECHNICAL CAPABILITIES
+/* #region TECHNICAL CAPABILITIES
 ========================================================= */
 
 .engineering-capabilities {
@@ -135,7 +138,7 @@
 }
 
 
-/* Section Heading */
+/* #region SECTION HEADING */
 
 .engineering-capabilities__heading {
     max-width: 800px;
@@ -153,8 +156,10 @@
         line-height: 1.8;
     }
 
+/* #endregion SECTION HEADING */
 
-/* Capability Grid */
+
+/* #region CAPABILITY GRID */
 
 .engineering-capabilities__grid {
     display: grid;
@@ -196,8 +201,10 @@
     line-height: 1.8;
 }
 
+/* #endregion CAPABILITY GRID */
 
-/* Capability Tags */
+
+/* #region CAPABILITY TAGS */
 
 .engineering-capability__tags {
     display: flex;
@@ -217,9 +224,32 @@
         font-weight: 600;
     }
 
+/* #endregion CAPABILITY TAGS */
 
-/* =========================================================
-   ENGINEERING APPROACH
+
+/* #region RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .engineering-capabilities__heading {
+        margin-bottom: 36px;
+    }
+
+    .engineering-capabilities__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-capability {
+        padding: 28px;
+    }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion TECHNICAL CAPABILITIES */
+
+
+/* #region ENGINEERING APPROACH
 ========================================================= */
 
 .engineering-approach {
@@ -232,7 +262,7 @@
 }
 
 
-/* Approach Introduction */
+/* #region APPROACH INTRODUCTION */
 
 .engineering-approach__intro {
     display: grid;
@@ -265,8 +295,10 @@
             margin-bottom: 0;
         }
 
+/* #endregion APPROACH INTRODUCTION */
 
-/* Composite Layup Image */
+
+/* #region COMPOSITE LAYUP IMAGE */
 
 .engineering-approach__image {
     width: 100%;
@@ -284,10 +316,10 @@
         object-position: center;
     }
 
+/* #endregion COMPOSITE LAYUP IMAGE */
 
-/* =========================================================
-   ENGINEERING PROCESS
-========================================================= */
+
+/* #region ENGINEERING PROCESS */
 
 .engineering-process {
     display: grid;
@@ -332,9 +364,105 @@
     line-height: 1.7;
 }
 
+/* #endregion ENGINEERING PROCESS */
 
-/* =========================================================
-   ENGINEERING SOFTWARE
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    /* Engineering Approach */
+
+    .engineering-approach__intro {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+        gap: 35px;
+    }
+
+    .engineering-approach__image {
+        height: 350px;
+    }
+
+
+    /* Engineering Process */
+
+    .engineering-process {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .engineering-process__step {
+        padding: 28px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+        .engineering-process__step:first-child {
+            padding-left: 28px;
+        }
+
+        .engineering-process__step:last-child {
+            padding-right: 28px;
+        }
+
+        .engineering-process__step:nth-child(3) {
+            border-right: none;
+        }
+
+        .engineering-process__step:nth-child(4),
+        .engineering-process__step:nth-child(5) {
+            border-bottom: none;
+        }
+}
+
+
+@media (max-width: 650px) {
+
+    .engineering-approach__intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 45px;
+    }
+
+    .engineering-approach__heading h2 {
+        max-width: 100%;
+    }
+
+    .engineering-approach__description p {
+        font-size: 1rem;
+    }
+
+    .engineering-approach__image {
+        height: 280px;
+    }
+
+
+    /* Engineering Process */
+
+    .engineering-process {
+        grid-template-columns: 1fr;
+    }
+
+    .engineering-process__step,
+    .engineering-process__step:first-child,
+    .engineering-process__step:last-child {
+        padding: 26px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+        .engineering-process__step:last-child {
+            border-bottom: none;
+        }
+
+    .engineering-process__number {
+        margin-bottom: 12px;
+    }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion ENGINEERING APPROACH */
+
+
+/* #region ENGINEERING SOFTWARE
 ========================================================= */
 
 .engineering-software {
@@ -347,7 +475,7 @@
 }
 
 
-/* Section Heading */
+/* #region SECTION HEADING */
 
 .engineering-software__heading {
     max-width: 800px;
@@ -365,10 +493,10 @@
         line-height: 1.8;
     }
 
+/* #endregion SECTION HEADING */
 
-/* =========================================================
-   DISCIPLINE GROUPS
-========================================================= */
+
+/* #region DISCIPLINE GROUPS */
 
 .engineering-software__discipline {
     margin-bottom: 55px;
@@ -414,10 +542,10 @@
     line-height: 1.6;
 }
 
+/* #endregion DISCIPLINE GROUPS */
 
-/* =========================================================
-   SOFTWARE LOGO GRID
-========================================================= */
+
+/* #region SOFTWARE LOGO GRID */
 
 .engineering-software__grid {
     display: grid;
@@ -485,114 +613,10 @@
         text-align: center;
     }
 
-
-/* =========================================================
-   TECHNICAL TOOLKIT
-========================================================= */
-
-.engineering-toolkit {
-    background-color: var(--color-background-alt);
-}
-
-.engineering-toolkit__container {
-    width: min(100% - (var(--page-padding) * 2), var(--content-width));
-    margin-inline: auto;
-}
+/* #endregion SOFTWARE LOGO GRID */
 
 
-/* Section Heading */
-
-.engineering-toolkit__heading {
-    max-width: 800px;
-    margin-bottom: 55px;
-}
-
-    .engineering-toolkit__heading h2 {
-        margin-bottom: 0;
-    }
-
-
-/* Technical Skills Grid */
-
-.engineering-toolkit__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-
-/* Individual Skill Groups */
-
-.engineering-skill-group {
-    padding: 30px;
-    background-color: #FFFFFF;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-}
-
-    .engineering-skill-group h3 {
-        margin-bottom: 16px;
-        font-size: 1.25rem;
-    }
-
-    .engineering-skill-group p {
-        margin-bottom: 0;
-        font-size: 0.95rem;
-        line-height: 1.9;
-    }
-
-
-/* =========================================================
-   TABLET RESPONSIVE LAYOUT
-========================================================= */
-
-@media (max-width: 1000px) {
-
-    /* Engineering Approach */
-
-    .engineering-approach__intro {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
-        gap: 35px;
-    }
-
-    .engineering-approach__image {
-        height: 350px;
-    }
-
-
-    /* Engineering Process */
-
-    .engineering-process {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .engineering-process__step {
-        padding: 28px;
-        border-bottom: 1px solid var(--color-border);
-    }
-
-        .engineering-process__step:first-child {
-            padding-left: 28px;
-        }
-
-        .engineering-process__step:last-child {
-            padding-right: 28px;
-        }
-
-        .engineering-process__step:nth-child(3) {
-            border-right: none;
-        }
-
-        .engineering-process__step:nth-child(4),
-        .engineering-process__step:nth-child(5) {
-            border-bottom: none;
-        }
-}
-
-
-/* =========================================================
-   SOFTWARE TABLET LAYOUT
-========================================================= */
+/* #region RESPONSIVE */
 
 @media (max-width: 900px) {
 
@@ -606,87 +630,7 @@
 }
 
 
-/* =========================================================
-   MOBILE RESPONSIVE LAYOUT
-========================================================= */
-
 @media (max-width: 650px) {
-
-    /* Introduction */
-
-    .engineering-intro {
-        padding-block: 70px;
-    }
-
-    .engineering-intro__title {
-        font-size: 2.5rem;
-    }
-
-    .engineering-intro__description {
-        font-size: 1rem;
-    }
-
-
-    /* Technical Capabilities */
-
-    .engineering-capabilities__heading {
-        margin-bottom: 36px;
-    }
-
-    .engineering-capabilities__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .engineering-capability {
-        padding: 28px;
-    }
-
-
-    /* Engineering Approach */
-
-    .engineering-approach__intro {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-bottom: 45px;
-    }
-
-    .engineering-approach__heading h2 {
-        max-width: 100%;
-    }
-
-    .engineering-approach__description p {
-        font-size: 1rem;
-    }
-
-    .engineering-approach__image {
-        height: 280px;
-    }
-
-
-    /* Engineering Process */
-
-    .engineering-process {
-        grid-template-columns: 1fr;
-    }
-
-    .engineering-process__step,
-    .engineering-process__step:first-child,
-    .engineering-process__step:last-child {
-        padding: 26px 0;
-        border-right: none;
-        border-bottom: 1px solid var(--color-border);
-    }
-
-        .engineering-process__step:last-child {
-            border-bottom: none;
-        }
-
-    .engineering-process__number {
-        margin-bottom: 12px;
-    }
-
-
-    /* Engineering Software */
 
     .engineering-software__heading {
         margin-bottom: 35px;
@@ -724,9 +668,75 @@
         .engineering-software__item span {
             font-size: 0.78rem;
         }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion ENGINEERING SOFTWARE */
 
 
-    /* Technical Toolkit */
+/* #region TECHNICAL TOOLKIT
+========================================================= */
+
+.engineering-toolkit {
+    background-color: var(--color-background-alt);
+}
+
+.engineering-toolkit__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* #region SECTION HEADING */
+
+.engineering-toolkit__heading {
+    max-width: 800px;
+    margin-bottom: 55px;
+}
+
+    .engineering-toolkit__heading h2 {
+        margin-bottom: 0;
+    }
+
+/* #endregion SECTION HEADING */
+
+
+/* #region TECHNICAL SKILLS GRID */
+
+.engineering-toolkit__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* Individual Skill Groups */
+
+.engineering-skill-group {
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+    .engineering-skill-group h3 {
+        margin-bottom: 16px;
+        font-size: 1.25rem;
+    }
+
+    .engineering-skill-group p {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        line-height: 1.9;
+    }
+
+/* #endregion TECHNICAL SKILLS GRID */
+
+
+/* #region RESPONSIVE */
+
+@media (max-width: 650px) {
 
     .engineering-toolkit__heading {
         margin-bottom: 36px;
@@ -741,3 +751,7 @@
         padding: 26px;
     }
 }
+
+/* #endregion RESPONSIVE */
+
+/* #endregion TECHNICAL TOOLKIT */

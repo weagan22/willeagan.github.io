@@ -1,11 +1,9 @@
-
 /* =========================================================
    AUTOMATION PAGE
 ========================================================= */
 
 
-/* =========================================================
-   PAGE INTRODUCTION
+/* #region PAGE INTRODUCTION
 ========================================================= */
 
 .automation-intro {
@@ -22,6 +20,13 @@
     width: 100%;
     max-width: var(--content-width);
     margin-inline: auto;
+}
+
+
+/* #region INTRODUCTION CONTENT */
+
+.automation-intro__content {
+    min-width: 0;
 }
 
 .automation-intro__eyebrow {
@@ -56,8 +61,10 @@
     margin-top: 18px;
 }
 
+/* #endregion INTRODUCTION CONTENT */
 
-/* Introduction Image */
+
+/* #region INTRODUCTION IMAGE */
 
 .automation-intro__image {
     width: 100%;
@@ -66,17 +73,49 @@
     border-radius: var(--border-radius);
 }
 
-.automation-intro__image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: var(--border-radius);
+    .automation-intro__image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: var(--border-radius);
+    }
+
+/* #endregion INTRODUCTION IMAGE */
+
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .automation-intro__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 
-/* =========================================================
-   AUTOMATION CAPABILITIES
+@media (max-width: 650px) {
+
+    .automation-intro {
+        padding-block: 70px;
+    }
+
+    .automation-intro__title {
+        font-size: 2.5rem;
+    }
+
+    .automation-intro__description {
+        font-size: 1rem;
+    }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion PAGE INTRODUCTION */
+
+
+/* #region AUTOMATION CAPABILITIES
 ========================================================= */
 
 .automation-capabilities {
@@ -84,14 +123,12 @@
 }
 
 .automation-capabilities__container {
-    width: min( 100% - (var(--page-padding) * 2), var(--content-width) );
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
     margin-inline: auto;
 }
 
 
-/* =========================
-   Section Heading
-========================= */
+/* #region SECTION HEADING */
 
 .automation-capabilities__heading {
     max-width: 800px;
@@ -109,10 +146,10 @@
         line-height: 1.8;
     }
 
+/* #endregion SECTION HEADING */
 
-/* =========================
-   Capability Grid
-========================= */
+
+/* #region CAPABILITY GRID */
 
 .automation-capabilities__grid {
     display: grid;
@@ -123,9 +160,7 @@
 }
 
 
-/* =========================
-   Individual Capabilities
-========================= */
+/* Individual Capabilities */
 
 .automation-capability {
     padding: 32px;
@@ -152,24 +187,156 @@
     line-height: 1.8;
 }
 
+/* #endregion CAPABILITY GRID */
 
-/* =========================================================
-   AUTOMATION PROJECTS
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .automation-capabilities__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .automation-capabilities__heading {
+        margin-bottom: 36px;
+    }
+
+    .automation-capabilities__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .automation-capability {
+        padding: 26px;
+    }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion AUTOMATION CAPABILITIES */
+
+
+/* #region AUTOMATION ARCHITECTURE
 ========================================================= */
 
-.automation-projects {
+.automation-architecture {
     background-color: var(--color-background);
 }
 
-.automation-projects__container {
-    width: min( 100% - (var(--page-padding) * 2), var(--content-width) );
+.automation-architecture__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
     margin-inline: auto;
 }
 
 
-/* =========================
-   Section Heading
-========================= */
+/* #region ARCHITECTURE CONTENT */
+
+.automation-architecture__content {
+    min-width: 0;
+    max-width: 800px;
+}
+
+    .automation-architecture__content h2 {
+        margin-bottom: 24px;
+    }
+
+        .automation-architecture__content h2 span {
+            color: var(--color-blue);
+        }
+
+    .automation-architecture__content > p:not(.section-label) {
+        max-width: 760px;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+/* #endregion ARCHITECTURE CONTENT */
+
+
+/* #region ARCHITECTURE IMAGE */
+
+.automation-architecture__image {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 12px 30px rgba(16, 40, 61, 0.07);
+}
+
+    .automation-architecture__image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: calc(var(--border-radius) * 0.6);
+    }
+
+/* #endregion ARCHITECTURE IMAGE */
+
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .automation-architecture__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .automation-architecture__content {
+        max-width: 800px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .automation-architecture__container {
+        gap: 30px;
+    }
+
+    .automation-architecture__content h2 {
+        font-size: 2.2rem;
+    }
+
+    .automation-architecture__content > p:not(.section-label) {
+        font-size: 1rem;
+    }
+
+    .automation-architecture__image {
+        padding: 8px;
+    }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion AUTOMATION ARCHITECTURE */
+
+
+/* #region AUTOMATION PROJECTS
+========================================================= */
+
+.automation-projects {
+    background-color: var(--color-background-alt);
+}
+
+.automation-projects__container {
+    width: min(100% - (var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}
+
+
+/* #region SECTION HEADING */
 
 .automation-projects__heading {
     max-width: 800px;
@@ -187,10 +354,10 @@
         line-height: 1.8;
     }
 
+/* #endregion SECTION HEADING */
 
-/* =========================
-   Project Grid
-========================= */
+
+/* #region PROJECT GRID */
 
 .automation-projects__grid {
     display: grid;
@@ -198,10 +365,10 @@
     gap: 32px;
 }
 
+/* #endregion PROJECT GRID */
 
-/* =========================================================
-   INDIVIDUAL PROJECT CARDS
-========================================================= */
+
+/* #region INDIVIDUAL PROJECT CARDS */
 
 .automation-project {
     display: flex;
@@ -220,9 +387,7 @@
     }
 
 
-/* =========================
-   Project Media
-========================= */
+/* Project Media */
 
 .automation-project__media {
     display: flex;
@@ -230,8 +395,9 @@
     justify-content: center;
     width: 100%;
     aspect-ratio: 16 / 10;
+    padding: 10px;
     overflow: hidden;
-    background-color: var(--color-background-alt);
+    background-color: var(--color-background);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -243,9 +409,7 @@
     }
 
 
-/* =========================
-   Project Content
-========================= */
+/* Project Content */
 
 .automation-project__content {
     display: flex;
@@ -276,9 +440,7 @@
 }
 
 
-/* =========================
-   Technology Tags
-========================= */
+/* Technology Tags */
 
 .automation-project__tags {
     display: flex;
@@ -298,14 +460,47 @@
         font-weight: 600;
     }
 
+/* #endregion INDIVIDUAL PROJECT CARDS */
 
-/* =========================================================
-   CLOSING SECTION
+
+/* #region RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .automation-projects__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .automation-projects__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .automation-projects__heading {
+        margin-bottom: 36px;
+    }
+
+    .automation-project__content {
+        padding: 24px;
+    }
+}
+
+/* #endregion RESPONSIVE */
+
+/* #endregion AUTOMATION PROJECTS */
+
+
+/* #region CLOSING SECTION
 ========================================================= */
 
 .automation-closing {
     padding: 85px var(--page-padding);
-    background-color: var(--color-background-alt);
+    background-color: var(--color-background);
 }
 
 .automation-closing__container {
@@ -314,6 +509,9 @@
     margin-inline: auto;
     text-align: center;
 }
+
+
+    /* #region CLOSING CONTENT */
 
     .automation-closing__container .section-label {
         margin-bottom: 16px;
@@ -329,6 +527,11 @@
         font-size: 1.05rem;
         line-height: 1.8;
     }
+
+/* #endregion CLOSING CONTENT */
+
+
+/* #region CLOSING BUTTON */
 
 .automation-closing__button {
     display: inline-flex;
@@ -349,102 +552,12 @@
         color: var(--color-navy);
     }
 
+/* #endregion CLOSING BUTTON */
 
 
-/* =========================================================
-   RESPONSIVE LAYOUT
-========================================================= */
-
-
-/* =========================
-   Tablet / Smaller Desktop
-========================= */
-
-@media (max-width: 900px) {
-
-    /* Introduction */
-
-    .automation-intro__container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .automation-intro__image img {
-        height: 320px;
-    }
-}
-
-
-/* =========================
-   Tablet
-========================= */
-
-@media (max-width: 1000px) {
-
-    .automation-capabilities__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .automation-projects__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-    }
-}
-
-
-/* =========================
-   Mobile
-========================= */
+/* #region RESPONSIVE */
 
 @media (max-width: 650px) {
-
-    /* Introduction */
-
-    .automation-intro {
-        padding-block: 70px;
-    }
-
-    .automation-intro__title {
-        font-size: 2.5rem;
-    }
-
-    .automation-intro__description {
-        font-size: 1rem;
-    }
-
-
-    /* Capabilities */
-
-    .automation-capabilities__heading {
-        margin-bottom: 36px;
-    }
-
-    .automation-capabilities__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .automation-capability {
-        padding: 26px;
-    }
-
-
-    /* Projects */
-
-    .automation-projects__grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .automation-projects__heading {
-        margin-bottom: 36px;
-    }
-
-    .automation-project__content {
-        padding: 24px;
-    }
-
-
-    /* Closing */
 
     .automation-closing {
         padding-block: 65px;
@@ -454,3 +567,7 @@
         font-size: 2rem;
     }
 }
+
+/* #endregion RESPONSIVE */
+
+/* #endregion CLOSING SECTION */
